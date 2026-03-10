@@ -2,7 +2,7 @@ import os
 import shutil
 
 
-stable_interface_list = ["luyaokun", "gaofangzhou"]
+stable_interface_list = ["luyaokun", "gaofangzhou", "laozhangren"]
 stable_interface_pro_list = ["fuliming"]
 beta_interface_list = ["zhangsan"]
 temporary_interface_list = ["lisi"]
@@ -12,7 +12,17 @@ summary_name_list = tuple(stable_interface_list + stable_interface_pro_list + be
 
 
 def distribute_interface():
-    pass
+    return_data = dict()
+    return_data["status_code"] = 0
+    try:
+        # 分发stable渠道
+        for name in stable_interface_list:
+            target_path = f"./distribute/{name}.json"
+            shutil.copy2("./stableinterface.json", target_path)
+    except:
+        pass
+    finally:
+        pass
 
 
 if __name__ == "__main__":
