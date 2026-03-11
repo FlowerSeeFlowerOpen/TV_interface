@@ -3,3 +3,4 @@ stableinterface.json
 stableinterfacepro.json
 temporaryinterface.json
 distribute_interface.py
+distribute_interface_test.py
